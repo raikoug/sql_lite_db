@@ -188,8 +188,8 @@ def sqlizziamo_registro():
     TABLE_NAMES = "('matricola', 'anno', 'crediti_anno_1', 'crediti_anno_2', 'crediti_anno_3', 'crediti_anno_4', 'crediti_anno_5', 'assenze', 'richiami_disciplinari', 'media')"
     VALUES = ""
     for k, v in Registro_Elettronico.items():
-        cur.execute(f"INSERT INTO registro_elettronico {TABLE_NAMES} VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", 
-                   (k, v['anno'], v['crediti_anno_1'], v['crediti_anno_2'], v['crediti_anno_3'], v['crediti_anno_4'], v['crediti_anno_5'], v['assenze'], v['richiami_disciplinari'], v['media'])
+        cur.execute(f"INSERT INTO registro_elettronico {TABLE_NAMES} VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", 
+                   (k, v['anno'], v['crediti_anno_1'], v['crediti_anno_2'], v['crediti_anno_3'], v['crediti_anno_4'], v['crediti_anno_5'], v['assenze'], v['richiami_disciplinari'], v['media'], v['matematica'], v['italiano'], v['latino'], v['inglese'], v['python'], v['storia'], v['geografia'], v['educazione_fisica'], v['educazione_civica'], v['storia_dell_arte'])
                    )
 
 
